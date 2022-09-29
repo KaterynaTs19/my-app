@@ -1,0 +1,111 @@
+.weather-app {
+  max-width: 700px;
+  margin: 50px auto 10px;
+  box-shadow: 0 8px 16px rgb(0 0 0 / 35%);
+  border-radius: 30px;
+  color: #3d6596;
+  padding: 70px 70px 55px;
+  font-family: "Montserrat", sans-serif, "Baloo 2", cursive;
+}
+.h1 {
+  font-size: 2em !important;
+  font-weight: bold !important;
+}
+.precipitation {
+  color: #999;
+  font-weight: normal;
+}
+.search-section {
+  margin-bottom: 30px;
+}
+.search-field:checked {
+  text-decoration: underline;
+}
+.city {
+  margin-bottom: 30px;
+}
+.city-current-updated {
+  margin-bottom: 20px;
+  font-size: 12px;
+  text-align: center;
+  color: #999;
+}
+.units {
+  font-size: 18px;
+  vertical-align: top;
+}
+.celsius,
+.fahrenheit {
+  text-decoration: none;
+}
+.img-icon {
+  max-width: 80px;
+  position: relative;
+  top: -10px;
+}
+
+li {
+  font-size: 15px;
+  line-height: none;
+  vertical-align: top;
+  color: #999;
+}
+.value-max,
+.value-min,
+.separator {
+  vertical-align: top;
+  line-height: 45px;
+  list-style: 45px;
+}
+
+.btn {
+  width: 100%;
+}
+.submit-input-container {
+  text-align: center;
+}
+
+.btn.btn-primary {
+  background-color: #fec9e5;
+  border: none;
+  color: #fff;
+}
+.btn.btn-secondary {
+  background-color: #79a4e7;
+  border: none;
+  color: #fff;
+}
+.btn.btn-primary:hover {
+  background-color: #79a4e7;
+}
+.btn.btn.btn-secondary:hover {
+  background-color: #fec9e5;
+}
+.forecast {
+  font-size: 16px;
+}
+.city-current-temperature {
+  font-size: 45px;
+}
+.icon-forecast {
+  box-sizing: border-box;
+  max-width: 35px;
+  min-height: 25px;
+  margin: 0 auto 10px;
+  color: #3d6596;
+}
+.img-forecast {
+  max-width: 35px;
+  max-height: 20px;
+  vertical-align: top;
+}
+.week-day {
+  margin-bottom: 15px;
+}
+p {
+  margin-bottom: 15px !important;
+}
+.footer {
+  text-align: center;
+  font-size: 14px;
+}
