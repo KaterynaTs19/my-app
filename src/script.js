@@ -50,7 +50,7 @@ function showCurrentCityTemp(response) {
   let currentMaxTemp = Math.round(response.data.main.temp_max);
   let currentMinTemp = Math.round(response.data.main.temp_min);
   let currentCity = response.data.name;
-  let currentDescription = response.data.weather[0].main;
+  let currentDescription = response.data.weather[0].description;
   let maxTemp = document.querySelector("#value-max");
   let minTemp = document.querySelector("#value-min");
   let h1 = document.querySelector("h1");
