@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather_app</title>
-    <link rel="stylesheet" href="src/style.css" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,6 +14,7 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="src/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Montserrat:wght@100;200;300;400&display=swap"
       rel="stylesheet"
@@ -61,8 +62,8 @@
           <p class="city-current-updated" id="last-update">
             Last update: Monday, 13:55 PM
           </p>
-          <h1 class="h1">Berlin, <span>DE</span></h1>
-          <p class="precipitation" id="precitation">Cloudy</p>
+          <h1 class="h1"><span id="country"></span></h1>
+          <p class="precipitation" id="precitation"></p>
           <div class="row">
             <div class="col-3 weather-icon-current">
               <img
@@ -73,13 +74,13 @@
             </div>
             <div class="col-6 city-current">
               <div class="city-current-temperature">
-                <span class="value-max" id="value-max">28</span>
+                <span class="value-max" id="value-max"></span>
                 <span class="units">
-                  <a href="#" class="celsius">°C |</a>
+                  <a href="#" class="celsius active">°C |</a>
                   <a href="#" class="fahrenheit">°F</a>
                 </span>
                 <span class="separator">|</span>
-                <span class="value-min" id="value-min">15</span>
+                <span class="value-min" id="value-min"></span>
                 <span class="units">
                   <a href="#" class="celsius">°C |</a>
                   <a href="#" class="fahrenheit">°F</a>
@@ -89,8 +90,8 @@
 
             <div class="col-3 city-parameters">
               <ul class="list-unstyled conditions">
-                <li>Wind: 2.68 m/s</li>
-                <li>Humidity: 60%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
+                <li>Humidity: <span id="humidity"></span>%</li>
               </ul>
             </div>
           </div>
@@ -104,7 +105,7 @@
 
               <div class="icon-forecast">
                 <img
-                  src="images/cloud.png"
+                  src="images/Vector 6.png"
                   alt="Weather icon"
                   class="img-forecast"
                 />
@@ -117,7 +118,7 @@
 
               <div class="icon-forecast">
                 <img
-                  src="images/cloud.png"
+                  src="images/Vector 6.png"
                   alt="Weather icon"
                   class="img-forecast"
                 />
@@ -129,7 +130,7 @@
 
               <div class="icon-forecast">
                 <img
-                  src="images/cloud.png"
+                  src="images/Vector 6.png"
                   alt="Weather icon"
                   class="img-forecast"
                 />
@@ -165,7 +166,7 @@
 
               <div class="icon-forecast">
                 <img
-                  src="images/cloud.png"
+                  src="images/Vector 6.png"
                   alt="Weather icon"
                   class="img-forecast"
                 />
@@ -189,6 +190,6 @@
       src="https://kit.fontawesome.com/e2dac9e9b1.js"
       crossorigin="anonymous"
     ></script>>-->
-    <script src="src/script.js"></script>
+    <script src="src/index.js"></script>
   </body>
 </html>
