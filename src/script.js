@@ -46,20 +46,25 @@ fahrenheitValue.addEventListener("click", toFahrenheit);
 let celsiusValue = document.querySelector(".celsius");
 celsiusValue.addEventListener("click", toCelsius);
 
-function showCurrentCityTemp(response) {
-  let currentMaxTemp = Math.round(response.data.main.temp_max);
-  let currentMinTemp = Math.round(response.data.main.temp_min);
-  let currentCity = response.data.name;
-  let currentDescription = response.data.weather[0].description;
-  let maxTemp = document.querySelector("#value-max");
-  let minTemp = document.querySelector("#value-min");
-  let h1 = document.querySelector("h1");
-  let description = document.querySelector("#precitation");
-  h1.innerHTML = currentCity;
-  maxTemp.innerHTML = currentMaxTemp;
-  minTemp.innerHTML = currentMinTemp;
-  description.innerHTML = currentDescription;
+function showCurrentCityConditions(response) {
   console.log(response);
+  document.querySelector("#value-max").innerHTML = Math.round(
+    response.data.main.temp_max
+  );
+  document.querySelector("#value-min").innerHTML = Math.round(
+    response.data.main.temp_min
+  );
+  document.querySelector(
+    "h1"
+  ).innerHTML = `${response.data.name}, ${response.data.sys.country}`;
+  document.querySelector("#precitation").innerHTML =
+    response.data.weather[0].description;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector("#humidity").innerHTML = Math.round(
+    response.data.main.humidity
+  );
 }
 
 function showLocationByPosition(position) {
@@ -69,11 +74,7 @@ function showLocationByPosition(position) {
   let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather";
   let units = "metric";
   let apiUrl = `${apiEndPoint}?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
-  axios.get(apiUrl).then(showCurrentCityTemp);
-  // console.log(position);
-  // console.log(position.coords.latitude);
-  // console.log(position.coords.longitude);
-  console.log(position);
+  axios.get(apiUrl).then(showCurrentCityConditions);
 }
 
 function getCurrentLocation() {
@@ -89,7 +90,7 @@ function showLocationByCity(cityName) {
   let units = "metric";
   let apiUrlCity = `${apiEndpoint}?q=${cityName}&appid=${apiKey}&units=${units}`;
   console.log(apiUrlCity);
-  axios.get(apiUrlCity).then(showCurrentCityTemp);
+  axios.get(apiUrlCity).then(showCurrentCityConditions);
 }
 
 function showCheckedCityTemp(event) {
