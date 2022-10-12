@@ -96,8 +96,8 @@ li {
 }
 .weather-forecast-icon {
   box-sizing: border-box;
-  max-width: 35px;
-  min-height: 20px;
+  max-width: 25px;
+  min-height: 15px;
   margin: 0 auto 10px;
   color: #3d6596;
   vertical-align: top;
