@@ -84,26 +84,25 @@ li {
   background-color: #fec9e5;
 }
 .forecast {
-  font-size: 16px;
 }
 .city-current-temperature {
   font-size: 43px;
 }
-.icon-forecast {
+.weather-forecast-date {
+  margin-bottom: 10px;
+  line-height: 16px;
+  font-size: 16px;
+  color: #999;
+}
+.weather-forecast-icon {
   box-sizing: border-box;
   max-width: 35px;
-  min-height: 25px;
+  min-height: 20px;
   margin: 0 auto 10px;
   color: #3d6596;
-}
-.img-forecast {
-  max-width: 35px;
-  max-height: 20px;
   vertical-align: top;
 }
-.week-day {
-  margin-bottom: 15px;
-}
+
 p {
   margin-bottom: 15px;
 }
