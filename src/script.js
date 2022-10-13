@@ -27,17 +27,6 @@ function whatCurrentDate() {
   dateToday.innerHTML = `Last update: ${dayOfWeek}, ${hours}:${minutes}`;
 }
 
-function toFahrenheit() {
-  let celsius = 28;
-  let fahrenheit = Math.round(celsius * (9 / 5) + 32);
-  let valueMax = document.querySelector(".value-max");
-  valueMax.innerHTML = `${fahrenheit}`;
-}
-function toCelsius() {
-  let valueMax = document.querySelector(".value-max");
-  valueMax.innerHTML = "28";
-}
-
 whatCurrentDate();
 
 function formatDay(timestamp) {
@@ -97,7 +86,6 @@ function showCurrentCityConditions(response) {
     response.data.main.humidity
   );
   getForecast(response.data.coord);
-  console.log(response.data.coord);
 }
 
 function showLocationByPosition(position) {
@@ -119,7 +107,7 @@ function showLocationByCity(cityName) {
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
   let units = "metric";
   let apiUrlCity = `${apiEndpoint}?q=${cityName}&appid=${apiKey}&units=${units}`;
-  console.log(apiUrlCity);
+
   axios.get(apiUrlCity).then(showCurrentCityConditions);
 }
 
@@ -128,12 +116,6 @@ function showCheckedCityTemp(event) {
   let input = document.querySelector("#your-city");
   showLocationByCity(input.value);
 }
-
-let fahrenheitValue = document.querySelector(".fahrenheit");
-fahrenheitValue.addEventListener("click", toFahrenheit);
-
-let celsiusValue = document.querySelector(".celsius");
-celsiusValue.addEventListener("click", toCelsius);
 
 let currentButton = document.querySelector("#current-location");
 currentButton.addEventListener("click", getCurrentLocation);

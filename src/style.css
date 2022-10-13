@@ -34,15 +34,16 @@
 .units {
   font-size: 18px;
   vertical-align: top;
+  position: relative;
+  top: 6px;
+  color: #79a4e7;
 }
-.celsius,
-.fahrenheit {
+.celsius {
   text-decoration: none;
 }
 .img-icon {
   max-width: 80px;
-  position: relative;
-  top: -10px;
+  padding-top: 11px;
 }
 
 li {
@@ -52,14 +53,25 @@ li {
   color: #999;
   text-align: left;
 }
+
 .value-max,
 .value-min,
 .separator {
   vertical-align: top;
-  line-height: 43px;
+  line-height: 70px;
   list-style: 43px;
+  font-size: 70px;
 }
-
+.separator {
+  font-size: 60px;
+  opacity: 0.2;
+}
+.value-max {
+  color: #79a4e7;
+}
+.value-min {
+  color: #fec9e5;
+}
 .btn {
   width: 100%;
 }
@@ -84,9 +96,6 @@ li {
   background-color: #fec9e5;
 }
 
-.city-current-temperature {
-  font-size: 43px;
-}
 .weather-forecast-date {
   margin-bottom: 10px;
   line-height: 16px;
@@ -101,7 +110,9 @@ li {
   color: #3d6596;
   vertical-align: top;
 }
-
+.city-parameters {
+  padding-top: 21px;
+}
 p {
   margin-bottom: 15px;
 }
