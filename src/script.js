@@ -50,9 +50,7 @@ function showForecast(response) {
           <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div> 
           
         <img
-          src= "http://openweathermap.org/img/wn/${
-            forecastDay.weather[0].icon
-          }@2x.png"
+          src= "images/${forecastDay.weather[0].icon}.png"
           alt="Weather icon"
           class="weather-forecast-icon"
           id="weather-forecast-icon"

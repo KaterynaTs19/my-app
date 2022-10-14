@@ -60,16 +60,15 @@
 
 .img-icon {
   max-width: 100px;
-  max-height: 53px;
-  /* max-width: 100%;
-  max-height: 100%; */
+  max-height: 70px;
+
   display: block;
   margin: 0 auto;
 }
 .units {
   font-size: 18px;
   position: relative;
-  top: 14px;
+  top: 21px;
   color: #79a4e7;
 }
 .units-min {
@@ -79,10 +78,8 @@
 .value-min,
 .separator {
   vertical-align: top;
-
   list-style: 43px;
   font-size: 70px;
-  line-height: 90px;
 }
 .separator {
   font-size: 65px;
@@ -99,7 +96,7 @@
   line-height: none;
   color: #999;
   text-align: left;
-  padding-top: 20px;
+  padding-top: 22px;
 }
 
 .weather-forecast-date {
@@ -110,8 +107,8 @@
 }
 .weather-forecast-icon {
   box-sizing: border-box;
-  max-width: 50px;
-  min-height: 35px;
+  max-width: 47px;
+  min-height: 40px;
   margin: 0 auto 10px;
   color: #3d6596;
   vertical-align: top;
