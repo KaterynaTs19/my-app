@@ -100,7 +100,7 @@
 }
 .weather-forecast-icon {
   box-sizing: border-box;
-  max-width: 25px;
+  max-width: 50px;
   min-height: 15px;
   margin: 0 auto 10px;
   color: #3d6596;
