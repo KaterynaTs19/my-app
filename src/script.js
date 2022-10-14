@@ -30,11 +30,13 @@ function whatCurrentDate() {
 whatCurrentDate();
 
 function formatDay(timestamp) {
+  console.log(timestamp);
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
   let days = ["Sun", "Mo", "Tue", "Wed", "Thu", "Fri", "Sat"];
   return days[day];
 }
+
 function showForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   let forecast = response.data.daily;
@@ -53,10 +55,11 @@ function showForecast(response) {
           }@2x.png"
           alt="Weather icon"
           class="weather-forecast-icon"
+          id="weather-forecast-icon"
         />
         <div class="weather-forecast-temp">${Math.round(
           forecastDay.temp.day
-        )}°C</div>
+        )}°</div>
       </div>`;
     }
     console.log(forecastDay);
@@ -91,10 +94,7 @@ function showCurrentCityConditions(response) {
 
   document
     .querySelector("#img-icon")
-    .setAttribute(
-      "src",
-      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-    );
+    .setAttribute("src", `images/${response.data.weather[0].icon}.png`);
   document
     .querySelector("#img-icon")
     .setAttribute("alt", response.data.weather[0].description);

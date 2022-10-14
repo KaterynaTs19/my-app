@@ -50,16 +50,20 @@
   color: #999;
   font-weight: normal;
   font-size: 18px;
+  margin-bottom: 0;
 }
+.weather-icon-current {
+  padding: 16px;
+}
+
 .img-icon {
-  max-width: 80px;
-  padding-top: 11px;
+  max-width: 100px;
+  max-height: 70px;
 }
 .units {
   font-size: 18px;
-  vertical-align: top;
   position: relative;
-  top: 6px;
+  top: 14px;
   color: #79a4e7;
 }
 .units-min {
@@ -69,12 +73,13 @@
 .value-min,
 .separator {
   vertical-align: top;
-  line-height: 70px;
+
   list-style: 43px;
   font-size: 70px;
+  line-height: 90px;
 }
 .separator {
-  font-size: 60px;
+  font-size: 65px;
   opacity: 0.2;
 }
 .value-max {
@@ -86,10 +91,9 @@
 .conditions {
   font-size: 15px;
   line-height: none;
-  vertical-align: top;
   color: #999;
   text-align: left;
-  padding-top: 21px;
+  padding-top: 20px;
 }
 
 .weather-forecast-date {
@@ -101,12 +105,15 @@
 .weather-forecast-icon {
   box-sizing: border-box;
   max-width: 50px;
-  min-height: 15px;
+  min-height: 35px;
   margin: 0 auto 10px;
   color: #3d6596;
   vertical-align: top;
 }
-
+.weather-forecast-temp {
+  font-size: 20px;
+  color: #3d6596;
+}
 .footer {
   text-align: center;
   font-size: 14px;
