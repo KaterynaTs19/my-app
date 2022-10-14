@@ -48,7 +48,9 @@ function showForecast(response) {
           <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div> 
           
         <img
-          src="images/sun.png"
+          src= "http://openweathermap.org/img/wn/${
+            forecastDay.weather[0].icon
+          }@2x.png"
           alt="Weather icon"
           class="weather-forecast-icon"
         />
@@ -57,6 +59,7 @@ function showForecast(response) {
         )}°C</div>
       </div>`;
     }
+    console.log(forecastDay);
   });
 
   forecastHTML += `</div>`;
@@ -85,6 +88,16 @@ function showCurrentCityConditions(response) {
   document.querySelector("#humidity").innerHTML = Math.round(
     response.data.main.humidity
   );
+
+  document
+    .querySelector("#img-icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+  document
+    .querySelector("#img-icon")
+    .setAttribute("alt", response.data.weather[0].description);
   getForecast(response.data.coord);
 }
 
