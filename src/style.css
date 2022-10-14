@@ -7,20 +7,33 @@
   padding: 70px 70px 55px;
   font-family: "Montserrat", sans-serif, "Baloo 2", cursive;
 }
-.h1 {
-  font-size: 35px;
-}
-.precipitation {
-  color: #999;
-  font-weight: normal;
-  font-size: 18px;
-}
+
 .search-section {
   margin-bottom: 30px;
 }
 .search-field:checked {
   text-decoration: underline;
 }
+.btn {
+  width: 100%;
+}
+.btn.btn-primary {
+  background-color: #fec9e5;
+  border: none;
+  color: #fff;
+}
+.btn.btn-secondary {
+  background-color: #79a4e7;
+  border: none;
+  color: #fff;
+}
+.btn.btn-primary:hover {
+  background-color: #79a4e7;
+}
+.btn.btn.btn-secondary:hover {
+  background-color: #fec9e5;
+}
+
 .city {
   margin-bottom: 30px;
 }
@@ -29,6 +42,18 @@
   font-size: 12px;
   text-align: center;
   color: #999;
+}
+.h1 {
+  font-size: 35px;
+}
+.precipitation {
+  color: #999;
+  font-weight: normal;
+  font-size: 18px;
+}
+.img-icon {
+  max-width: 80px;
+  padding-top: 11px;
 }
 .units {
   font-size: 18px;
@@ -40,22 +65,6 @@
 .units-min {
   color: #fec9e5;
 }
-.celsius {
-  text-decoration: none;
-}
-.img-icon {
-  max-width: 80px;
-  padding-top: 11px;
-}
-
-li {
-  font-size: 15px;
-  line-height: none;
-  vertical-align: top;
-  color: #999;
-  text-align: left;
-}
-
 .value-max,
 .value-min,
 .separator {
@@ -74,28 +83,13 @@ li {
 .value-min {
   color: #fec9e5;
 }
-.btn {
-  width: 100%;
-}
-.submit-input-container {
-  text-align: center;
-}
-
-.btn.btn-primary {
-  background-color: #fec9e5;
-  border: none;
-  color: #fff;
-}
-.btn.btn-secondary {
-  background-color: #79a4e7;
-  border: none;
-  color: #fff;
-}
-.btn.btn-primary:hover {
-  background-color: #79a4e7;
-}
-.btn.btn.btn-secondary:hover {
-  background-color: #fec9e5;
+.conditions {
+  font-size: 15px;
+  line-height: none;
+  vertical-align: top;
+  color: #999;
+  text-align: left;
+  padding-top: 21px;
 }
 
 .weather-forecast-date {
@@ -112,12 +106,7 @@ li {
   color: #3d6596;
   vertical-align: top;
 }
-.city-parameters {
-  padding-top: 21px;
-}
-p {
-  margin-bottom: 15px;
-}
+
 .footer {
   text-align: center;
   font-size: 14px;
