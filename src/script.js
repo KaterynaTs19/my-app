@@ -60,7 +60,6 @@ function showForecast(response) {
         )}°</div>
       </div>`;
     }
-    console.log(forecastDay);
   });
 
   forecastHTML += `</div>`;
@@ -73,7 +72,7 @@ function getForecast(coordinates) {
 }
 function showCurrentCityConditions(response) {
   document.querySelector("#value-max").innerHTML = Math.round(
-    response.data.main.temp_max
+    response.data.main.temp
   );
   document.querySelector("#value-min").innerHTML = Math.round(
     response.data.main.temp_min
@@ -89,7 +88,7 @@ function showCurrentCityConditions(response) {
   document.querySelector("#humidity").innerHTML = Math.round(
     response.data.main.humidity
   );
-
+  console.log(response.data);
   document
     .querySelector("#img-icon")
     .setAttribute("src", `images/${response.data.weather[0].icon}.png`);
